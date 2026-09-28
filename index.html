@@ -112,7 +112,7 @@
     <div class="quote-inner">
       <div class="quote-intro">
         <h2>Tell me about your business.</h2>
-        <p class="lede">A few lines is plenty. Fill this out and your email app opens with everything filled in, or just write to <a href="mailto:braeden.culp@elkhorndigital.com">braeden.culp@elkhorndigital.com</a>.</p>
+        <p class="lede">A few lines is plenty. Fill this out and it goes straight to my inbox, or just write to <a href="mailto:braeden.culp@elkhorndigital.com">braeden.culp@elkhorndigital.com</a>.</p>
         <ol class="next">
           <li><strong>Tell me what you need.</strong> Your business, and what you want your website to do.</li>
           <li><strong>We talk it through.</strong> I'll ask questions until I understand how you work.</li>
@@ -149,6 +149,7 @@
         <label>Tell me more
           <textarea name="details" rows="5" required></textarea>
         </label>
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
         <button class="btn btn-copper" type="submit">Request a quote</button>
         <p class="form-note" id="formNote" role="status"></p>
       </form>
@@ -167,26 +168,51 @@
   var TO = 'braeden.culp@elkhorndigital.com';
   var form = document.getElementById('quoteForm');
   var note = document.getElementById('formNote');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
+  var btn = form.querySelector('button[type="submit"]');
+
+  function say(text, kind) {
+    note.textContent = text;
+    note.className = 'form-note' + (kind ? ' ' + kind : '');
+  }
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
     var f = form.elements;
     if (!f.name.value.trim() || !f.email.value.trim() || !f.details.value.trim()) {
-      note.textContent = 'Please fill in your name, email and a few details.';
+      say('Please fill in your name, email and a few details.', 'is-error');
       return;
     }
-    var body = [
-      'Name: ' + f.name.value.trim(),
-      'Email: ' + f.email.value.trim(),
-      'Business: ' + f.business.value.trim(),
-      'Current website: ' + f.site.value.trim(),
-      'Looking for: ' + f.type.value,
-      '',
-      f.details.value.trim()
-    ].join('\r\n');
-    note.textContent = 'Opening your email app. If nothing opens, email ' + TO + ' directly.';
-    window.location.href = 'mailto:' + TO +
-      '?subject=' + encodeURIComponent('Quote request' + (f.business.value.trim() ? ': ' + f.business.value.trim() : '')) +
-      '&body=' + encodeURIComponent(body);
+    btn.disabled = true;
+    say('Sending...');
+    fetch('https://formsubmit.co/ajax/' + TO, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name: f.name.value.trim(),
+        email: f.email.value.trim(),
+        business: f.business.value.trim(),
+        current_website: f.site.value.trim(),
+        looking_for: f.type.value,
+        message: f.details.value.trim(),
+        _honey: f._honey.value,
+        _subject: 'Quote request' + (f.business.value.trim() ? ': ' + f.business.value.trim() : ''),
+        _template: 'table',
+        _captcha: 'false'
+      })
+    })
+      .then(function (res) { return res.json().then(function (data) { return { ok: res.ok, data: data }; }); })
+      .then(function (r) {
+        if (r.ok && String(r.data.success) === 'true') {
+          form.reset();
+          say('Thanks, your message is on its way to me. I will write back at the email you gave.', 'is-ok');
+        } else {
+          throw new Error('send failed');
+        }
+      })
+      .catch(function () {
+        say('That did not go through. Please email me directly at ' + TO + '.', 'is-error');
+      })
+      .then(function () { btn.disabled = false; });
   });
 })();
 </script>

@@ -155,7 +155,11 @@ h3 { font-size: clamp(1.4rem, 2vw, 1.75rem); letter-spacing: -0.02em; line-heigh
 .quote-form input:focus, .quote-form textarea:focus, .quote-form select:focus { outline: 2px solid var(--copper-solid); outline-offset: 1px; border-color: transparent; }
 .quote-form textarea { resize: vertical; }
 .quote-form .btn { justify-self: start; padding: 17px 34px; }
-.form-note { margin: 0; min-height: 1.4em; font-size: 0.92rem; color: #e0a479; }
+.form-note { margin: 0; min-height: 1.4em; font-size: 0.92rem; color: #aab3c0; }
+.form-note.is-ok { color: #8fd3a5; }
+.form-note.is-error { color: #e0a479; }
+.quote-form .btn:disabled { opacity: 0.6; cursor: wait; transform: none; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 
 /* footer */
 .site-footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 28px var(--gutter); border-top: 1px solid var(--line); }

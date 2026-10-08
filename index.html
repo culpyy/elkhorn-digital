@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -149,8 +149,27 @@
   <section class="pricing" id="pricing">
     <div class="sec-head">
       <p class="kicker">Pricing</p>
-      <h2>A small start, or pay it off up front.</h2>
-      <p class="intro">Same site either way. Low start keeps the first bill small. Pay in full costs more today and less every month after.</p>
+      <h2>Two ways to pay. Same site.</h2>
+      <p class="intro">You get the same site and the same tools either way. The only difference is how you pay for building it.</p>
+    </div>
+
+    <div class="ways">
+      <article class="way">
+        <h3>Low start</h3>
+        <p class="way-tag">The smallest first bill</p>
+        <p>You pay a small start fee, and the rest of the build is spread into your monthly payment. There's one minimum: stay until the build is paid off, which is 12 months on Starter, 20 on Pro and 28 on Elite. If you leave sooner, you just pay what's left of the build. Nothing more.</p>
+        <p class="way-best"><strong>Good fit if</strong> you'd rather keep cash in the shop right now.</p>
+      </article>
+      <article class="way">
+        <h3>Pay in full</h3>
+        <p class="way-tag">The lowest monthly</p>
+        <p>You pay for the build up front, so your monthly is lower from day one. There's no minimum, and you can leave whenever you want.</p>
+        <p class="way-best"><strong>Good fit if</strong> you plan to stay a while. The lower monthly makes up the bigger first payment in about a year on Starter, 20 months on Pro and 28 months on Elite.</p>
+      </article>
+    </div>
+
+    <div class="toggle-row">
+      <span>Show prices for</span>
       <div class="toggle" role="radiogroup" aria-label="How you'd like to pay">
         <button type="button" role="radio" aria-checked="true" data-pay="low">Low start</button>
         <button type="button" role="radio" aria-checked="false" data-pay="full">Pay in full</button>
@@ -163,6 +182,7 @@
         <p class="who">A great-looking site that's easy to keep current.</p>
         <p class="price"><span class="p-up" data-low="$199" data-full="$549">$199</span> <span class="p-lbl" data-low="to start" data-full="to build">to start</span></p>
         <p class="price-mo"><span data-low="$89" data-full="$59">$89</span>/month</p>
+        <p class="term" data-low="12-month minimum, until the build is paid off" data-full="No minimum">12-month minimum, until the build is paid off</p>
         <ul>
           <li>Your own custom look, on your domain</li>
           <li>Your logo, photos, colors and words</li>
@@ -179,6 +199,7 @@
         <p class="who">Everything in Starter, plus the tools that run the shop.</p>
         <p class="price"><span class="p-up" data-low="$499" data-full="$1,499">$499</span> <span class="p-lbl" data-low="to start" data-full="to build">to start</span></p>
         <p class="price-mo"><span data-low="$179" data-full="$129">$179</span>/month</p>
+        <p class="term" data-low="20-month minimum, until the build is paid off" data-full="No minimum">20-month minimum, until the build is paid off</p>
         <ul>
           <li>Build tracking with codes for every job</li>
           <li>Live in-shop board and build gallery</li>
@@ -195,6 +216,7 @@
         <p class="who">Everything in Pro, plus selling online.</p>
         <p class="price"><span class="p-up" data-low="$799" data-full="$2,999">$799</span> <span class="p-lbl" data-low="to start" data-full="to build">to start</span></p>
         <p class="price-mo"><span data-low="$329" data-full="$249">$329</span>/month</p>
+        <p class="term" data-low="28-month minimum, until the build is paid off" data-full="No minimum">28-month minimum, until the build is paid off</p>
         <ul>
           <li>Online store with checkout</li>
           <li>Your distributors' catalog on your site</li>
@@ -202,7 +224,7 @@
         <p class="waitlist">Opening to a few shops at a time. Ask to get on the list.</p>
       </article>
     </div>
-    <p class="fine" data-low="Low start comes with a 12-month first term. If you leave early, you only owe the unpaid part of the build, prorated. Monthly billing starts when your site goes live." data-full="Pay in full has no term. Monthly billing starts when your site goes live.">Low start comes with a 12-month first term. If you leave early, you only owe the unpaid part of the build, prorated. Monthly billing starts when your site goes live.</p>
+    <p class="fine">Monthly billing starts when your site goes live, not before. Content changes are included on every plan.</p>
   </section>
 
   <section class="proof" id="proof">

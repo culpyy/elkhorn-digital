@@ -235,3 +235,17 @@ section { position: relative; }
 .legal p { color: var(--text); }
 .legal a { text-underline-offset: 3px; text-decoration-color: var(--copper); }
 .site-footer a { color: inherit; text-underline-offset: 3px; }
+
+/* Pricing: the two ways to pay, explained */
+.ways { max-width: var(--max); margin: 0 auto 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.way { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 28px 30px; }
+.way h3 { font-size: 1.6rem; }
+.way-tag { margin: 4px 0 14px; font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--copper-text); }
+.way p:not(.way-tag) { color: var(--dim); }
+.way-best { margin: 16px 0 0; padding-top: 14px; border-top: 1px dashed var(--line); }
+.way-best strong { color: var(--ink); }
+.toggle-row { max-width: var(--max); margin: 0 auto 36px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; font-weight: 600; color: var(--ink); }
+.toggle-row .toggle { margin-top: 0; }
+.plan .term { margin: -12px 0 20px; font-size: .88rem; color: var(--copper-text); font-weight: 600; }
+.plan-pro .term { color: var(--copper-hi); }
+@media (max-width: 760px) { .ways { grid-template-columns: 1fr; } }

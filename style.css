@@ -1,5 +1,5 @@
 /* Elkhorn Digital. Editorial studio look: cool bone paper, the logo's navy
-   ink and copper used sparingly, Instrument Serif display, Geist text,
+   ink and copper used sparingly, Archivo bold display, Geist text,
    Geist Mono for labels. Real screens carry the page, hairlines not cards. */
 :root {
   --paper: #f6f5f1;
@@ -15,7 +15,7 @@
   --copper-text: #8f5028;
   --gutter: clamp(20px, 5vw, 80px);
   --max: 1280px;
-  --serif: "Instrument Serif", Georgia, serif;
+  --serif: "Archivo", system-ui, sans-serif;
   --sans: "Geist", system-ui, sans-serif;
   --mono: "Geist Mono", ui-monospace, Consolas, monospace;
 }
@@ -32,11 +32,11 @@ a { color: inherit; }
 p { margin: 0 0 1em; }
 :focus-visible { outline: 2px solid var(--copper); outline-offset: 3px; }
 
-h1, h2, h3 { margin: 0; font-family: var(--serif); font-weight: 400; color: var(--ink); letter-spacing: -0.01em; }
-h1 em, h2 em { font-style: italic; color: var(--copper-text); }
-h1 { font-size: clamp(3.2rem, 8.4vw, 8.2rem); line-height: .94; letter-spacing: -0.025em; }
-h2 { font-size: clamp(2.5rem, 5vw, 4.4rem); line-height: 1; letter-spacing: -0.02em; }
-h3 { font-size: clamp(1.45rem, 2vw, 1.8rem); line-height: 1.15; }
+h1, h2, h3 { margin: 0; font-family: var(--serif); font-weight: 700; color: var(--ink); letter-spacing: -0.01em; }
+h1 em, h2 em { font-style: normal; color: var(--copper-text); }
+h1 { font-size: clamp(2.9rem, 7.2vw, 7rem); line-height: .96; letter-spacing: -0.035em; font-weight: 800; }
+h2 { font-size: clamp(2.2rem, 4.4vw, 3.8rem); line-height: 1.02; letter-spacing: -0.03em; }
+h3 { font-size: clamp(1.2rem, 1.6vw, 1.45rem); line-height: 1.2; font-weight: 600; letter-spacing: -0.015em; }
 
 .mono { font-family: var(--mono); }
 .intro { color: var(--dim); font-size: 1.1rem; max-width: 34em; margin: 1.2rem 0 0; }
@@ -106,7 +106,7 @@ h3 { font-size: clamp(1.45rem, 2vw, 1.8rem); line-height: 1.15; }
 
 /* Statement */
 .statement { max-width: var(--max); margin: 0 auto; padding: clamp(80px, 11vw, 150px) var(--gutter); }
-.statement .big { margin: 0; max-width: 22em; font-family: var(--serif); font-size: clamp(1.9rem, 3.6vw, 3.2rem); line-height: 1.12; color: var(--ink); letter-spacing: -.01em; }
+.statement .big { margin: 0; max-width: 22em; font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.6rem); line-height: 1.16; font-weight: 600; color: var(--ink); letter-spacing: -.025em; }
 .statement .big span { color: var(--dim); }
 .sig { display: flex; flex-direction: column; margin: 32px 0 0; }
 .sig strong { font-weight: 500; color: var(--ink); }
@@ -149,7 +149,7 @@ h3 { font-size: clamp(1.45rem, 2vw, 1.8rem); line-height: 1.15; }
 }
 .style-strip figure { margin: 0; scroll-snap-align: start; }
 .style-strip img { border-radius: 6px; box-shadow: 0 0 0 1px rgba(255,255,255,.08); }
-.style-strip figcaption { display: flex; gap: 14px; align-items: baseline; margin-top: 14px; font-family: var(--serif); font-size: 1.4rem; color: #fff; }
+.style-strip figcaption { display: flex; gap: 14px; align-items: baseline; margin-top: 14px; font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: #fff; }
 .style-strip figcaption .mono { font-size: .74rem; color: var(--copper-hi); }
 
 /* Pricing */
@@ -166,10 +166,10 @@ h3 { font-size: clamp(1.45rem, 2vw, 1.8rem); line-height: 1.15; }
 .plan { position: relative; padding: 36px clamp(20px, 2.6vw, 40px) 36px; }
 .plan:first-child { padding-left: 0; }
 .plan + .plan { border-left: 1px solid var(--line); }
-.plan h3 { font-size: 2.4rem; }
+.plan h3 { font-size: 2rem; }
 .plan .who { color: var(--dim); font-size: .97rem; margin: 6px 0 26px; min-height: 3.1em; }
 .price { margin: 0; color: var(--ink); }
-.p-up { font-family: var(--serif); font-size: 3.4rem; line-height: 1; letter-spacing: -.02em; }
+.p-up { font-family: var(--serif); font-size: 3rem; font-weight: 700; line-height: 1; letter-spacing: -.03em; }
 .p-lbl { font-size: .92rem; color: var(--dim); }
 .price-mo { margin: 6px 0 4px; font-weight: 500; color: var(--ink); }
 .price-mo span { font-size: 1.25rem; }
@@ -253,8 +253,8 @@ h3 { font-size: clamp(1.45rem, 2vw, 1.8rem); line-height: 1.15; }
 
 /* Privacy + terms pages */
 .legal { max-width: 46rem; margin: 0 auto; padding: clamp(48px, 7vw, 96px) var(--gutter) clamp(64px, 9vw, 120px); }
-.legal h1 { font-size: clamp(2.6rem, 5vw, 3.8rem); }
+.legal h1 { font-size: clamp(2.2rem, 4vw, 3.2rem); }
 .legal .updated { color: var(--dim); font: .85rem var(--mono); margin: 0.8rem 0 2rem; }
-.legal h2 { font-size: 1.8rem; margin: 2.4rem 0 0.6rem; }
+.legal h2 { font-size: 1.4rem; margin: 2.4rem 0 0.6rem; }
 .legal p { color: var(--text); }
 .legal a { text-underline-offset: 3px; text-decoration-color: var(--copper); }

@@ -31,141 +31,134 @@
 <link rel="icon" type="image/png" href="images/favicon.png?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=6">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
 <header class="site-header">
-  <a class="brand" href="#top" aria-label="Elkhorn Digital home">
-    <img src="images/logo.png" alt="Elkhorn Digital" width="650" height="160">
-  </a>
-  <nav class="nav" aria-label="Main">
-    <a href="#work">Work</a>
-    <a href="#timberline">Timberline</a>
-    <a href="#pricing">Pricing</a>
-    <a class="btn btn-ink btn-sm" href="#start">Start a project</a>
-  </nav>
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="Elkhorn Digital home">
+      <img src="images/logo.png" alt="Elkhorn Digital" width="650" height="160">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#work">Work</a>
+      <a href="#pricing">Pricing</a>
+      <a class="btn btn-dark btn-sm" href="#start">Start a project</a>
+    </nav>
+  </div>
 </header>
 
 <main id="top">
 
   <section class="hero">
-    <div class="hero-head">
-      <p class="eyebrow"><span>Elkhorn Digital</span><span>Websites for the firearms trade</span><span>Nebraska</span></p>
-      <h1>Custom websites for gun shops <em>and gunsmiths.</em></h1>
-      <div class="hero-sub">
-        <p class="lede">I design and build every site myself, on Timberline, my own platform made for how a shop actually runs. Your look, your photos, your words, and the tools your customers keep calling you about.</p>
-        <div class="actions">
-          <a class="btn btn-ink" href="#start">Start a project</a>
-          <a class="btn btn-line" href="https://timberline.demo-shell.workers.dev/" target="_blank" rel="noopener">Open the demo shop <span aria-hidden="true">&#8599;</span></a>
-        </div>
-      </div>
+    <h1>Websites built for how your shop actually runs.</h1>
+    <p class="lede">Custom websites for gun shops, gunsmiths and small businesses, designed and built by me.</p>
+    <div class="actions">
+      <a class="btn btn-dark" href="#start">Start a project</a>
+      <a class="btn btn-ghost" href="https://timberline.demo-shell.workers.dev/" target="_blank" rel="noopener">See the demo shop <svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
     </div>
 
     <div class="stage">
-      <figure class="frame frame-desk stage-desk">
-        <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>timberline demo shop</span></div>
-        <img src="images/timberline/desk-home.jpg" alt="The Timberline demo shop homepage" width="1280" height="800">
+      <figure class="browser stage-desk">
+        <div class="chrome" aria-hidden="true"><i></i><i></i><i></i></div>
+        <img src="images/timberline/desk-home.jpg" alt="The Timberline demo shop homepage" width="2160" height="1350">
       </figure>
-      <figure class="frame frame-phone stage-phone">
-        <img src="images/timberline/phone-track.jpg" alt="A customer checking a 1911 build's progress on their phone" width="780" height="1688">
+      <figure class="phone stage-phone">
+        <img src="images/timberline/phone-home.jpg" alt="The demo shop homepage on a phone" width="780" height="1688">
       </figure>
-      <p class="stage-note mono">Live demo. Look up build <b>TRK-2026-006</b>.</p>
+    </div>
+    <p class="hero-note">The demo is a real working site. Look up build <b>TRK-2026-006</b>.</p>
+  </section>
+
+  <section class="features" id="features">
+    <div class="sec-head">
+      <h2>Your customers stop calling to ask. The site answers for you.</h2>
+      <p>Every site starts with the questions customers call you about, so they can answer them on their own.</p>
+    </div>
+
+    <article class="spot">
+      <div class="spot-copy">
+        <h3>Customers check their own build.</h3>
+        <p>Every job gets a tracking code. Your customer types it in and sees the stage, the progress and your latest note. You update it from your admin in a couple of taps.</p>
+        <ul class="ticks">
+          <li>Stage, progress and estimated finish</li>
+          <li>Your note on what's happening now</li>
+          <li>Email when it's ready for pickup</li>
+        </ul>
+      </div>
+      <div class="spot-art">
+        <figure class="phone"><img src="images/timberline/phone-track.jpg" alt="Build status page showing a custom 1911 in progress" width="780" height="1688" loading="lazy"></figure>
+      </div>
+    </article>
+
+    <div class="pair">
+      <article class="panel">
+        <div class="panel-copy">
+          <h3>A live board of what's on the bench.</h3>
+          <p>Jobs in the shop, in the queue and ready for pickup, updated as you work.</p>
+        </div>
+        <figure class="browser panel-shot"><div class="chrome" aria-hidden="true"><i></i><i></i><i></i></div><img src="images/timberline/desk-inshop.jpg" alt="On the Bench board with build counts" width="2160" height="1350" loading="lazy"></figure>
+      </article>
+      <article class="panel">
+        <div class="panel-copy">
+          <h3>Mail-in work, without the mystery box.</h3>
+          <p>Two short steps and a reference code for the box. You know what's coming before it lands.</p>
+        </div>
+        <figure class="phone panel-phone"><img src="images/timberline/phone-intake.jpg" alt="Ship something to us form on a phone" width="780" height="1688" loading="lazy"></figure>
+      </article>
+    </div>
+
+    <div class="more">
+      <div><h3>Dealer license checks</h3><p>Check a dealer against the ATF's list before anything ships. Customers can find one near them too.</p></div>
+      <div><h3>Reviews you approve</h3><p>Invite a customer to review a finished job. Nothing shows until you say so.</p></div>
+      <div><h3>News from the shop</h3><p>Post what just came in or what you're working on. It shows on your homepage right away.</p></div>
+      <div><h3>One login to run it</h3><p>Update jobs, approve reviews, ask me for a change and download all your data any time.</p></div>
     </div>
   </section>
 
-  <section class="statement">
-    <p class="big">One person, start to finish. You talk to the one who builds your site, before launch and long after it. <span>Everything is in writing before we start, and if something isn't right, you tell me and I fix it.</span></p>
-    <p class="sig"><strong>Braeden Culp</strong><span>Owner, Elkhorn Digital, LLC</span></p>
+  <section class="looks">
+    <div class="sec-head sec-split">
+      <h2>Six starting points. Then it's yours.</h2>
+      <p>Pick the one closest to your shop. It gets your logo, colors, photos and words, and I adjust it until it looks like you and nobody else.</p>
+    </div>
+    <div class="look-grid">
+      <figure><img src="images/timberline/style-caliber.jpg" alt="Caliber style" width="1280" height="800" loading="lazy"><figcaption>Caliber</figcaption></figure>
+      <figure><img src="images/timberline/style-bold_industrial.jpg" alt="Bold Industrial style" width="1280" height="800" loading="lazy"><figcaption>Bold Industrial</figcaption></figure>
+      <figure><img src="images/timberline/style-ironwood.jpg" alt="Ironwood style" width="1280" height="800" loading="lazy"><figcaption>Ironwood</figcaption></figure>
+      <figure><img src="images/timberline/style-minimal_trade.jpg" alt="Minimal Trade style" width="1280" height="800" loading="lazy"><figcaption>Minimal Trade</figcaption></figure>
+      <figure><img src="images/timberline/style-modern_craft.jpg" alt="Modern Craft style" width="1280" height="800" loading="lazy"><figcaption>Modern Craft</figcaption></figure>
+      <figure><img src="images/timberline/style-technical_quiet.jpg" alt="Technical Quiet style" width="1280" height="800" loading="lazy"><figcaption>Technical Quiet</figcaption></figure>
+    </div>
   </section>
 
   <section class="work" id="work">
-    <div class="sec-label mono"><span>01</span>Selected work</div>
-    <div class="case">
-      <div class="case-shots">
-        <figure class="frame frame-desk case-desk">
-          <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>goldenvalleygunsllc.com</span></div>
-          <img src="images/work/gvg-desk.jpg" alt="Golden Valley Guns homepage" width="1440" height="900" loading="lazy">
-        </figure>
-        <figure class="frame frame-phone case-phone">
-          <img src="images/work/gvg-phone.jpg" alt="Golden Valley Guns homepage on a phone" width="780" height="1688" loading="lazy">
-        </figure>
+    <div class="work-inner">
+      <div class="work-copy">
+        <h2>It started with Golden Valley Guns.</h2>
+        <p>A firearms builder in Golden Valley, Arizona. I built their site from scratch: a store with more than 13,000 products and real checkout, build tracking, a mail-in form, dealer lookups and one dashboard to run it all.</p>
+        <p>The parts every shop needs turned out to be the same parts, so I made them into the platform every site I build now starts from.</p>
+        <a class="link" href="https://goldenvalleygunsllc.com" target="_blank" rel="noopener">Visit goldenvalleygunsllc.com <svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
       </div>
-      <div class="case-copy">
-        <h2>Golden Valley Guns</h2>
-        <dl class="meta">
-          <div><dt>Where</dt><dd>Golden Valley, Arizona</dd></div>
-          <div><dt>What</dt><dd>Full site, online store, shop tools</dd></div>
-          <div><dt>Status</dt><dd>Live and running the shop</dd></div>
-        </dl>
-        <p>A firearms manufacturer and builder that needed more than a brochure. I built their site from scratch: a store with more than 13,000 products and real checkout, build tracking with codes, a two-step mail-in form, dealer lookups, and one dashboard to run all of it.</p>
-        <p>The parts every shop needs turned out to be the same parts. So I made them into Timberline, and every site I build now starts from that proven base.</p>
-        <a class="link" href="https://goldenvalleygunsllc.com" target="_blank" rel="noopener">Visit goldenvalleygunsllc.com <span aria-hidden="true">&#8599;</span></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="tools" id="timberline">
-    <div class="sec-label mono"><span>02</span>Timberline</div>
-    <div class="tools-grid">
-      <div class="tools-head">
-        <h2>Built around how a shop <em>actually runs.</em></h2>
-        <p class="intro">Every site starts with the things customers call you about, so they can answer those questions themselves.</p>
-        <figure class="frame frame-desk tools-shot">
-          <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>in shop board</span></div>
-          <img src="images/timberline/desk-inshop.jpg" alt="Live in-shop board showing builds in progress and ready for pickup" width="1280" height="800" loading="lazy">
-        </figure>
-      </div>
-      <ol class="tool-list">
-        <li><h3>Customers check their own build.</h3><p>Every job gets a tracking code. Your customer types it in and sees the stage, the progress and your latest note. The phone stops ringing with "is it done yet?"</p></li>
-        <li><h3>A live board of what's on the bench.</h3><p>A public page shows jobs in the shop, in the queue and ready for pickup. It fills in on its own as you update builds.</p></li>
-        <li><h3>Mail-in work, without the mystery box.</h3><p>Customers fill out two short steps and get a reference code for the box. When it shows up, you already know what it is and who sent it.</p></li>
-        <li><h3>Dealer license checks.</h3><p>Check a dealer against the ATF's list before anything ships. Customers can find a dealer near them too.</p></li>
-        <li><h3>Reviews you approve.</h3><p>Invite a customer to review a finished build. Nothing shows on your site until you say so.</p></li>
-        <li><h3>One login to run it.</h3><p>Update builds, post news, approve reviews, ask me for a change and download all your data whenever you want.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="styles">
-    <div class="styles-head">
-      <div class="sec-label mono"><span>03</span>The look</div>
-      <h2>Six starting points. <em>Then it's yours.</em></h2>
-      <p class="intro">Pick the one closest to your shop. It gets your logo, colors, photos and words, and I adjust the layout until it looks like you and nobody else.</p>
-    </div>
-    <div class="style-strip" tabindex="0" aria-label="Starting styles, scroll sideways">
-      <figure><img src="images/timberline/style-caliber.jpg" alt="Caliber style" width="1280" height="800" loading="lazy"><figcaption><span class="mono">01</span>Caliber</figcaption></figure>
-      <figure><img src="images/timberline/style-bold_industrial.jpg" alt="Bold Industrial style" width="1280" height="800" loading="lazy"><figcaption><span class="mono">02</span>Bold Industrial</figcaption></figure>
-      <figure><img src="images/timberline/style-ironwood.jpg" alt="Ironwood style" width="1280" height="800" loading="lazy"><figcaption><span class="mono">03</span>Ironwood</figcaption></figure>
-      <figure><img src="images/timberline/style-minimal_trade.jpg" alt="Minimal Trade style" width="1280" height="800" loading="lazy"><figcaption><span class="mono">04</span>Minimal Trade</figcaption></figure>
-      <figure><img src="images/timberline/style-modern_craft.jpg" alt="Modern Craft style" width="1280" height="800" loading="lazy"><figcaption><span class="mono">05</span>Modern Craft</figcaption></figure>
-      <figure><img src="images/timberline/style-technical_quiet.jpg" alt="Technical Quiet style" width="1280" height="800" loading="lazy"><figcaption><span class="mono">06</span>Technical Quiet</figcaption></figure>
+      <figure class="browser work-shot">
+        <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><span>goldenvalleygunsllc.com</span></div>
+        <img src="images/work/gvg-desk.jpg" alt="Golden Valley Guns homepage" width="1440" height="900" loading="lazy">
+      </figure>
     </div>
   </section>
 
   <section class="pricing" id="pricing">
-    <div class="sec-label mono"><span>04</span>Pricing</div>
-    <div class="pricing-head">
-      <h2>Two ways to pay. <em>Same site.</em></h2>
-      <div class="ways">
-        <div class="way">
-          <h3>Low start</h3>
-          <p>You pay a small start fee, and the rest of the build is spread into your monthly payment. There's one minimum: stay until the build is paid off, which is 12 months on Starter, 20 on Pro and 28 on Elite. If you leave sooner, you just pay what's left of the build, plus your monthly through the 30-day notice.</p>
-        </div>
-        <div class="way">
-          <h3>Pay in full</h3>
-          <p>You pay for the build up front, so your monthly is lower from day one. There's no minimum. You can leave any time with 30 days' notice. The lower monthly makes up the bigger first payment in about a year on Starter, 20 months on Pro and 28 months on Elite.</p>
-        </div>
-      </div>
+    <div class="price-head">
+    <div class="sec-head sec-left">
+      <h2>Simple pricing. Two ways to pay.</h2>
+      <p>Same site and same tools either way. The only difference is how you pay for building it.</p>
     </div>
 
-    <div class="toggle-row">
-      <span>Show prices for</span>
-      <div class="toggle" role="radiogroup" aria-label="How you'd like to pay">
-        <button type="button" role="radio" aria-checked="true" data-pay="low">Low start</button>
-        <button type="button" role="radio" aria-checked="false" data-pay="full">Pay in full</button>
-      </div>
+    <div class="toggle" role="radiogroup" aria-label="How you'd like to pay">
+      <button type="button" role="radio" aria-checked="true" data-pay="low">Low start</button>
+      <button type="button" role="radio" aria-checked="false" data-pay="full">Pay in full</button>
+    </div>
     </div>
 
     <div class="plans">
@@ -186,9 +179,8 @@
       </article>
 
       <article class="plan plan-pro">
-        <p class="flag mono">Where I&rsquo;d start</p>
-        <h3>Pro</h3>
-        <p class="who">Everything in Starter, plus the tools that run the shop.</p>
+                <h3>Pro</h3>
+        <p class="who">Everything in Starter, plus the tools that run the shop. It&rsquo;s where I&rsquo;d start most shops.</p>
         <p class="price"><span class="p-up" data-low="$499" data-full="$1,499">$499</span> <span class="p-lbl" data-low="to start" data-full="to build">to start</span></p>
         <p class="price-mo"><span data-low="$179" data-full="$129">$179</span>/month</p>
         <p class="term" data-low="20-month minimum, until the build is paid off" data-full="No minimum">20-month minimum, until the build is paid off</p>
@@ -216,22 +208,27 @@
         <p class="waitlist">Opening to a few shops at a time. Ask to get on the list.</p>
       </article>
     </div>
+    <div class="ways">
+      <p><strong>Low start.</strong> A small start fee, with the rest of the build spread into your monthly. Stay until the build is paid off: 12 months on Starter, 20 on Pro, 28 on Elite. Leave sooner and you just pay what's left of the build, plus your monthly through the 30-day notice.</p>
+      <p><strong>Pay in full.</strong> Pay for the build up front and your monthly is lower from day one. No minimum, leave any time with 30 days' notice. The lower monthly makes up the difference in about a year on Starter, 20 months on Pro and 28 on Elite.</p>
+    </div>
     <p class="fine">Monthly billing starts when your site goes live, not before. Content changes are included on every plan. Full terms are on the <a href="terms.html">terms page</a>.</p>
   </section>
 
   <section class="start" id="start">
     <div class="start-inner">
       <div class="start-intro">
-        <div class="sec-label mono"><span>05</span>Start a project</div>
-        <h2>Tell me about <em>your shop.</em></h2>
+        <h2>Tell me about your shop.</h2>
         <ol class="steps">
-          <li><span class="mono">01</span><div><strong>You send this form.</strong> A few lines about your shop is plenty.</div></li>
-          <li><span class="mono">02</span><div><strong>I set up a demo with your name on it.</strong> A working site for your shop that you can click through for a week.</div></li>
-          <li><span class="mono">03</span><div><strong>You fill in one page, I build it out.</strong> Your info, your photos, the look you like. You go live on your domain, and billing starts then.</div></li>
+          <li><strong>You send this form.</strong> A few lines about your shop is plenty.</li>
+          <li><strong>I set up a demo with your name on it.</strong> A working site for your shop to click through for a week.</li>
+          <li><strong>You fill in one page, I build it out.</strong> You go live on your domain, and billing starts then.</li>
         </ol>
-        <p class="direct">Rather just email? <a href="mailto:braeden.culp@elkhorndigital.com">braeden.culp@elkhorndigital.com</a></p>
+        <div class="me">
+          <p>You deal with me directly, from the first message through launch and long after. Everything's in writing before we start.</p>
+          <p class="sig"><strong>Braeden Culp</strong> Owner, Elkhorn Digital, LLC &middot; Nebraska</p>
+        </div>
       </div>
-
       <form id="quoteForm" class="quote-form" novalidate>
         <div class="row">
           <label>Your name
@@ -271,13 +268,19 @@
 </main>
 
 <footer class="site-footer">
-  <img src="images/logo.png" alt="Elkhorn Digital" width="650" height="160">
-  <p>Timberline is made by Elkhorn Digital, LLC</p>
-  <p>&copy; 2026 Elkhorn Digital, LLC &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms</a></p>
+  <div class="footer-inner">
+    <img src="images/logo.png" alt="Elkhorn Digital" width="650" height="160">
+    <p>&copy; 2026 Elkhorn Digital, LLC &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="mailto:braeden.culp@elkhorndigital.com">braeden.culp@elkhorndigital.com</a></p>
+  </div>
 </footer>
 
 <script>
 (function () {
+  // Header hairline once the page scrolls
+  var hdr = document.querySelector(".site-header");
+  function onScroll() { hdr.classList.toggle("scrolled", scrollY > 8); }
+  addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
   // Pricing: low start / pay in full
   var btns = document.querySelectorAll('.toggle button');
   function setPay(mode) {

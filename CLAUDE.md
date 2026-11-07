@@ -33,9 +33,11 @@ service, not a scaling agency.
 
 **No em dashes.** Anywhere in site copy.
 
-**`legal/msa-2026-10-14.pdf` and `legal/fee-schedule-2026-10-14.pdf` are the final
-attorney-reviewed documents.** Do not edit, regenerate, or rewrite them. Pricing was locked
-2026-10-07. If terms change, that is a new dated PDF and a lawyer conversation, not an edit.
+**`legal/*.pdf` are signed-against contract versions: never edit, regenerate, or rewrite one.**
+Each Order Form links to its exact dated PDF. Current = `msa-2026-11-04.pdf` + `fee-schedule-2026-11-04.pdf`
+(final per Braeden 2026-11-07: the attorney-reviewed 10-14 terms with only the pay-in-full option
+removed). 2AC Guns signed under `msa-2026-10-14.pdf`, so those stay at their links forever. A terms
+change is a new dated PDF, published before any Order Form that points to it is sent.
 
 **Design bar: real imagery and editorial layout.** No icon-and-card grids, no cutesy badges, no
 templated section rhythm. This site is the portfolio for the design work being sold, so a

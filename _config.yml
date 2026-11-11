@@ -1,0 +1,6 @@
+exclude:
+  - CLAUDE.md
+  - serve.mjs
+  - tools/
+  - "*.mjs"
+  - "*.md"
